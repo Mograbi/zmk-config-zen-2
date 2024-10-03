@@ -49,10 +49,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC  &kp Q  &kp W  &kp E     &kp R  &kp T          &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G          &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td0     &kp Z  &kp X  &kp C     &kp V  &kp B          &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                       &kp LALT  &mo 1  &lt 3 ENTER    &lt 3 SPACE  &mo 2  &kp RALT
+&gresc   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td0     &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                       &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RCTRL
             >;
         };
 
@@ -66,7 +66,7 @@
             //                    |     |     |     |   | DEL | INS |    |
 
             bindings = <
-&trans          &kp EXCL         &kp AT          &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR  &kp MINUS
+&kp GRAVE       &kp EXCL         &kp AT          &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR  &kp MINUS
 &trans          &kp N1           &kp N2          &kp N3    &kp N4    &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSLH
 &kp LEFT_SHIFT  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans    &trans    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans    &kp RIGHT_SHIFT
                                                  &trans    &trans    &trans             &kp DEL          &kp INS          &trans
@@ -100,10 +100,10 @@
             //                    | GUI |     | ENT |     | SPACE |     | CTRL |
 
             bindings = <
-&kp GRAVE  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6          &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
-&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans     &trans        &trans        &trans        &sys_reset    &bootloader     &bootloader     &trans  &trans  &trans  &trans           &trans
-                                       &trans        &trans        &trans          &trans          &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6          &kp F7  &kp F8  &kp F9  &kp F10          &kp F11
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
+&trans  &trans        &trans        &trans        &sys_reset    &bootloader     &bootloader     &trans  &trans  &trans  &trans           &trans
+                                    &trans        &trans        &trans          &trans          &trans  &trans
             >;
         };
     };
@@ -113,6 +113,11 @@
 
         layer3 {
             if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        layer32 {
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };
