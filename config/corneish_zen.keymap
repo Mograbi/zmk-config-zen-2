@@ -96,12 +96,12 @@
 
         jump_layer_1 {
             bindings = <&to 0>;
-            key-positions = <19 20 21 22>;
+            key-positions = <36 37 38>;
         };
 
         jump_to_game {
             bindings = <&to 4>;
-            key-positions = <31 32 33 34>;
+            key-positions = <39 40 41>;
         };
     };
 
