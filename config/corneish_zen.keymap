@@ -43,6 +43,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RALT|MOD_RSFT|MOD_RCTL)>;
         };
+
+        j_bracket: j_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "J_BRACKET";
+            bindings = <&kp J>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RSFT|MOD_RALT|MOD_RCTL)>;
+        };
+
+        k_bracket: k_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_BRACKET";
+            bindings = <&kp K>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        z_equal: z_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Z_EQUAL";
+            bindings = <&kp Z>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     combos {
@@ -72,10 +99,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&gresc   &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &kp O    &kp P     &kp BSPC
-&kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J           &kp K             &kp L    &kp SEMI  &kp SQT
-&td0     &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                       &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2           &kp RCTRL
+&gresc   &kp Q     &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &kp O    &kp P     &kp BSPC
+&kp TAB  &kp A     &kp S  &kp D     &kp F  &kp G        &kp H      &j_bracket      &k_bracket        &kp L    &kp SEMI  &kp SQT
+&td0     &z_equal  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2           &kp RCTRL
             >;
         };
 
@@ -89,10 +116,10 @@
             //                    |     |     |     |   | DEL | INS |    |
 
             bindings = <
-&kp GRAVE       &kp EXCL         &kp AT          &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR  &kp MINUS
-&trans          &kp N1           &kp N2          &kp N3    &kp N4    &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSLH
-&kp LEFT_SHIFT  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans    &trans    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans    &kp RIGHT_SHIFT
-                                                 &trans    &trans    &trans             &kp DEL          &kp INS          &trans
+&kp GRAVE       &kp EXCL   &kp AT          &kp HASH         &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR  &kp MINUS
+&trans          &kp N1     &kp N2          &kp N3           &kp N4    &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSLH
+&kp LEFT_SHIFT  &kp EQUAL  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &trans    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans    &kp RIGHT_SHIFT
+                                           &trans           &trans    &trans             &kp DEL          &kp INS          &trans
             >;
         };
 
