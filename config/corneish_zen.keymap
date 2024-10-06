@@ -70,6 +70,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
+
+        escape_grave: escape_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESCAPE_GRAVE";
+            bindings = <&kp ESC>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     combos {
@@ -99,10 +108,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&gresc   &kp Q     &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &kp O    &kp P     &kp BSPC
-&kp TAB  &kp A     &kp S  &kp D     &kp F  &kp G        &kp H      &j_bracket      &k_bracket        &kp L    &kp SEMI  &kp SQT
-&td0     &z_equal  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2           &kp RCTRL
+&escape_grave  &kp Q     &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &kp O    &kp P     &kp BSPC
+&kp TAB        &kp A     &kp S  &kp D     &kp F  &kp G        &kp H      &j_bracket      &k_bracket        &kp L    &kp SEMI  &kp SQT
+&td0           &z_equal  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2           &kp RCTRL
             >;
         };
 
