@@ -93,6 +93,16 @@
             bindings = <&kp RIGHT_ALT>;
             key-positions = <19 20>;
         };
+
+        jump_layer_1 {
+            bindings = <&to 0>;
+            key-positions = <19 20 21 22>;
+        };
+
+        jump_to_game {
+            bindings = <&to 4>;
+            key-positions = <31 32 33 34>;
+        };
     };
 
     keymap {
@@ -163,6 +173,15 @@
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp PRINTSCREEN  &kp F12
 &trans  &trans        &trans        &trans        &sys_reset    &bootloader     &bootloader     &trans  &trans  &trans  &trans           &trans
                                     &trans        &trans        &trans          &trans          &trans  &trans
+            >;
+        };
+
+        Game_layer {
+            bindings = <
+&trans          &trans    &kp UP_ARROW  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &trans    &trans        &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans     &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
