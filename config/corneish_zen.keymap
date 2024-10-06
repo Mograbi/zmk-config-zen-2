@@ -32,7 +32,7 @@
             bindings = <&kp U>, <&kp LEFT_BRACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_RALT|MOD_RSFT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_RALT|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
         };
 
         I_right_bracket: I_right_bracket {
@@ -41,7 +41,7 @@
             bindings = <&kp I>, <&kp RIGHT_BRACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RALT|MOD_RSFT|MOD_RCTL)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_RALT|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
         };
 
         j_bracket: j_bracket {
@@ -50,7 +50,7 @@
             bindings = <&kp J>, <&kp LEFT_BRACKET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_RSFT|MOD_RALT|MOD_RCTL)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_RALT|MOD_RCTL|MOD_RGUI|MOD_LGUI)>;
         };
 
         k_bracket: k_bracket {
@@ -59,7 +59,7 @@
             bindings = <&kp K>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
         z_equal: z_equal {
