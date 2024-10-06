@@ -34,6 +34,11 @@
             bindings = <&kp RCTRL>;
             key-positions = <15 16>;
         };
+
+        jkalt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
