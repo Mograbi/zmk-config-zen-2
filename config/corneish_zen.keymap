@@ -178,10 +178,10 @@
 
         Game_layer {
             bindings = <
-&trans          &trans    &kp UP_ARROW  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans    &trans        &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans     &kp LCTRL  &kp SPACE    &trans  &trans  &trans
+&kp ESCAPE      &trans    &kp UP_ARROW  &trans     &trans     &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&trans          &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &trans    &trans        &trans     &trans     &trans       &trans     &trans  &trans  &trans  &trans  &trans
+                                        &trans     &kp LCTRL  &kp SPACE    &kp ENTER  &trans  &trans
             >;
         };
     };
