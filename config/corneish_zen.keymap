@@ -68,7 +68,7 @@
             bindings = <&kp Z>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
 
         escape_grave: escape_grave {
@@ -77,7 +77,14 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI|MOD_LSFT|MOD_RSFT)>;
+        };
+
+        td_rgb: td_rgb {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RGB";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_ON>, <&rgb_ug RGB_OFF>;
         };
     };
 
@@ -135,10 +142,10 @@
             //                    |     |     |     |   | DEL | INS |    |
 
             bindings = <
-&kp GRAVE       &kp EXCL   &kp AT          &kp HASH         &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR  &kp RPAR  &kp MINUS
-&trans          &kp N1     &kp N2          &kp N3           &kp N4    &kp N5             &kp N6           &kp N7           &kp N8           &kp N9    &kp N0    &kp BSLH
-&kp LEFT_SHIFT  &kp EQUAL  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &trans    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &kp DOT   &trans    &kp RIGHT_SHIFT
-                                           &trans           &trans    &trans             &kp DEL          &kp INS          &trans
+&kp GRAVE       &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR  &kp RPAR  &kp MINUS
+&td_rgb         &kp N1     &kp N2    &kp N3    &kp N4    &kp N5             &kp N6           &kp N7           &kp N8           &kp N9    &kp N0    &kp BSLH
+&kp LEFT_SHIFT  &kp EQUAL  &kp PLUS  &trans    &trans    &rgb_ug RGB_EFF    &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &kp DOT   &trans    &kp RIGHT_SHIFT
+                                     &trans    &trans    &trans             &kp DEL          &kp INS          &trans
             >;
         };
 
