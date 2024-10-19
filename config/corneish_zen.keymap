@@ -68,7 +68,7 @@
             bindings = <&kp Z>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LALT|MOD_LGUI|MOD_RALT|MOD_RGUI)>;
         };
 
         escape_grave: escape_grave {
@@ -85,6 +85,24 @@
             label = "TD_RGB";
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_ON>, <&rgb_ug RGB_OFF>;
+        };
+
+        o_par_mod_morph: o_par_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_PAR_MOD_MORPH";
+            bindings = <&kp O>, <&kp LEFT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_RCTL|MOD_RALT)>;
+        };
+
+        p_par_mod_morph: p_par_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "P_PAR_MOD_MORPH";
+            bindings = <&kp P>, <&kp RIGHT_PARENTHESIS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_RCTL|MOD_RALT)>;
         };
     };
 
@@ -125,9 +143,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&escape_grave  &kp Q     &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &kp O    &kp P     &kp BSPC
-&kp TAB        &kp A     &kp S  &kp D     &kp F  &kp G        &kp H      &j_bracket      &k_bracket        &kp L    &kp SEMI  &kp SQT
-&td0           &z_equal  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&escape_grave  &kp Q     &kp W  &kp E     &kp R  &kp T        &kp Y      &U_bracket_mod  &I_right_bracket  &o_par_mod_morph  &p_par_mod_morph  &kp BSPC
+&kp TAB        &kp A     &kp S  &kp D     &kp F  &kp G        &kp H      &j_bracket      &k_bracket        &kp L             &kp SEMI          &kp SQT
+&td0           &z_equal  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M           &kp COMMA         &kp DOT           &kp FSLH          &kp RIGHT_SHIFT
                                 &kp LALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2           &kp RCTRL
             >;
         };
