@@ -159,9 +159,9 @@
             //                    | GUI |     | ENT |   | SPACE |     | CTRL |
 
             bindings = <
-&kp TILDE       &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans         &kp PG_UP  &trans    &kp UP     &trans     &trans  &kp DEL
-&trans          &trans  &trans  &kp HOME      &kp END       &trans         &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans  &kp C_PREV    &kp C_NEXT    &kp C_PAUSE    &trans     &trans    &trans     &trans     &trans  &kp RIGHT_SHIFT
+&kp TILDE       &trans  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans         &kp PG_UP  &trans    &kp UP     &trans     &kp PSCRN  &kp DEL
+&trans          &trans  &trans  &kp HOME      &kp END       &trans         &kp PG_DN  &kp LEFT  &kp DOWN   &kp RIGHT  &trans     &trans
+&kp LEFT_SHIFT  &trans  &trans  &kp C_PREV    &kp C_NEXT    &kp C_PAUSE    &trans     &trans    &trans     &trans     &trans     &kp RIGHT_SHIFT
                                 &kp LGUI      &trans        &kp RET        &kp SPACE  &trans    &kp RCTRL
             >;
         };
