@@ -110,12 +110,15 @@
             bindings = <&to 4>;
             key-positions = <39 40 41>;
         };
+
+        macwin {
+            bindings = <&kp LEFT_WIN>;
+            key-positions = <31 32>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
-
 
         default_layer {
             display-name = "QWERTY";
